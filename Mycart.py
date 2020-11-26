@@ -6,9 +6,9 @@ Date Created: 26-11-2020
 
 lst_category=[]
 lst_items=[]   
-category={'Mens Clothing':[{'Shirts':{'color':['Red','Black'],'size':['S','M','L'],'price':[999,990,1000]}},{'Jeans':{'color':'All colors are available','size':'all','price':100}}],
-          'Ladies Clothing':[{'Tops':{'color':['Red','Black'],'size':['S','M','L'],'price':[999,990,1000]}},],
-          'Kids Clothing':[{'Sweater':{'color':['Red','Black'],'size':['S','M','L'],'price':[999,990,1000]}},]}
+category={'Mens Clothing':[{'Shirts':{'color':['Red','Black'],'size':['S','M','L'],'price':[5555,990,1000]}},],
+          'Ladies Clothing':[{'Tops':{'color':['Red','Black'],'size':['S','M','L'],'price':[9999,3333,1000]}},],
+          'Kids Clothing':[{'Sweater':{'color':['Red','Black'],'size':['S','M','L'],'price':[999,4444,1000]}},]}
 
 '''To Display Avalilable Category'''
 
@@ -74,9 +74,6 @@ def checkout():
                     if bill_list[0] == 'Shirts':
                         cost = (category.get('Mens Clothing',{})[0].get(bill_list[0]).get('price')[int(bill_list[1])])
                         cost_items.append(cost)
-                    elif bill_list[0] == 'Jeans':
-                        cost =(category.get('Mens Clothing',{})[1].get(bill_list[0]).get('price')[int(bill_list[1])])
-                        cost_items.append(cost)
                     elif bill_list[0] == 'Tops':
                         cost = (category.get('Ladies Clothing',{})[0].get(bill_list[0]).get('price')[int(bill_list[1])])
                         cost_items.append(cost)
@@ -88,7 +85,7 @@ def checkout():
                 # checking conditions and calculating discount
                 if(amt>0):
                     if amt >= 10000:
-                        disc = amt*0.05
+                        disc = 500
                     else:
                         disc=0
                         

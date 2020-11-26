@@ -1,3 +1,9 @@
+"""
+Author: Karishma Shinde
+Title: This code is for View the products,Adding the products and Billing
+Date Created: 26-11-2020
+"""
+
 lst_category=[]
 lst_items=[]   
 category={'Mens Clothing':[{'Shirts':{'color':['Red','Black'],'size':['S','M','L'],'price':[999,990,1000]}},{'Jeans':{'color':'All colors are available','size':'all','price':100}}],
